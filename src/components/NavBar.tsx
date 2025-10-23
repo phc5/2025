@@ -1,15 +1,21 @@
 export default function NavBar() {
   return (
     <header className="overflow-hidden fixed left-4 lg:left-8 right-4 lg:right-8 top-4 lg:top-6">
-      <nav className="grid grid-cols-12 gap-4 lg:gp-8 tracking-tight">
+      <nav className="grid grid-cols-12 gap-4 lg:gp-8 tracking-tighter">
         <ul className="hidden lg:block col-span-3">
-          <span className="block overflow-hidden font-medium">Based in</span>{' '}
-          <span className="block overflow-hidden font-medium text-neutral-400">California</span>
+          <span className="block overflow-hidden text-[clamp(16px,1.2vw,20px)] font-medium">
+            Based in
+          </span>
+          <span className="block overflow-hidden text-[clamp(16px,1.2vw,20px)] font-medium text-neutral-400">
+            California
+          </span>
         </ul>
         <ul className="col-span-6">
-          <span className="block overflow-hidden font-medium">Currently at</span>{' '}
+          <span className="block overflow-hidden text-[clamp(16px,1.2vw,20px)] font-medium">
+            Currently at
+          </span>
           <span
-            className="block overflow-hidden font-medium text-neutral-400
+            className="block overflow-hidden font-medium text-[clamp(16px,1.2vw,20px)] text-neutral-400
           hover:text-blue-600 hover:underline hover:cursor-pointer"
           >
             Meta
@@ -23,8 +29,8 @@ export default function NavBar() {
         >
           <button
             type="button"
-            className="rounded-full bg-foreground px-3.5 py-2 font-bold text-background
-            hover:cursor-pointer"
+            className="rounded-full bg-foreground px-4 py-2.5 text-background font-bold
+            text-[clamp(16px,1.2vw,20px)] hover:cursor-pointer"
           >
             Get in touch
           </button>

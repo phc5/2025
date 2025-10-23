@@ -7,7 +7,7 @@ interface IslandMenuProps {
   onClose: () => void;
 }
 
-const menuItems = ['EXPERIENCE', 'ABOUT', 'STACK'];
+const menuItems = ['HOME', 'EXPERIENCE', 'ABOUT', 'CONTACT'];
 
 export default function IslandMenu({ isOpen, onClose }: IslandMenuProps) {
   const numItems = menuItems.length;
