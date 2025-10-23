@@ -1,13 +1,18 @@
+'use client';
+
 import Ticker from '@/components/HorizontalTicker';
-import Image from 'next/image';
+import IslandMenu from '@/components/IslandMenu';
+import { useState } from 'react';
 
 export default function Island() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div
       className="py-2 pl-2 pr-4 md:pr-8 rounded-2xl md:rounded-[20px] bg-neutral-900 border
     border-neutral-800 fixed left-4 md:left-1/2 right-4 md:right-auto md:-translate-x-1/2 bottom-4
-    md:bottom-6 md:w-[700px] z-50 overflow-hidden text-background"
+    md:bottom-6 md:w-[700px] overflow-hidden text-background"
     >
+      <IslandMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
       <div className="flex items-center justify-between">
         <div className="flex gap-4">
           <div
@@ -42,6 +47,7 @@ export default function Island() {
             aria-label="Open Menu"
             aria-expanded="false"
             className="text-neutral-100 hover:text-neutral-400 duration-300 cursor-pointer"
+            onClick={() => setMenuOpen((prev) => !prev)}
           >
             <path d="M4 18L20 18" />
             <path d="M4 12L20 12" />
