@@ -16,7 +16,7 @@ export default function IslandMenu({ isOpen, onClose }: IslandMenuProps) {
 
   return (
     <motion.div
-      className="overflow-hidden"
+      className="overflow-hidden z-50"
       animate={{
         height: isOpen ? 'auto' : 0,
         opacity: isOpen ? 1 : 0,
@@ -44,7 +44,7 @@ export default function IslandMenu({ isOpen, onClose }: IslandMenuProps) {
                   }}
                   onClick={onClose}
                   className="text-neutral-100 text-left hover:text-neutral-400 transition px-2
-                  py-1 cursor-pointer"
+                  py-1 cursor-pointer font-semibold tracking-tight"
                 >
                   {item}
                 </motion.button>

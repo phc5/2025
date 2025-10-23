@@ -10,7 +10,7 @@ export default function Island() {
     <div
       className="py-2 pl-2 pr-4 md:pr-8 rounded-2xl md:rounded-[20px] bg-neutral-900 border
     border-neutral-800 fixed left-4 md:left-1/2 right-4 md:right-auto md:-translate-x-1/2 bottom-4
-    md:bottom-6 md:w-[700px] overflow-hidden text-background"
+    md:bottom-6 md:w-[700px] overflow-hidden text-background z-50"
     >
       <IslandMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
       <div className="flex items-center justify-between">
