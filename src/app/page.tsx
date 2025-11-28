@@ -3,6 +3,7 @@ import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import Island from "@/components/Island";
 import NavBar from "@/components/NavBar";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <div className="h-svh relative px-4 lg:px-8 overflow-x-hidden"></div>
         <About />
         <Experience />
+        <TechStack />
       </main>
     </div>
   );
