@@ -12,7 +12,6 @@ export default function Home() {
       <main className="min-h-screen w-full items-center justify-between py-8 px-16 bg-white sm:items-start">
         <Hero />
         <div className="h-svh relative px-4 lg:px-8 overflow-x-hidden"></div>
-
         <About />
         <Experience />
       </main>

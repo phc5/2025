@@ -8,7 +8,7 @@ export default function Experience() {
           Experience
         </span>
       </h2>
-      <div className="flex flex-col gap-4 lg:gap-5 px-3 lg:px-4 pt-3 lg:pt-4 pb-5 lg:pb-6 bg-neutral-900 cursor-pointer group rounded-xl w-full ">
+      <div className="flex flex-col gap-4 lg:gap-5 p-10 bg-neutral-900 rounded-xl w-full">
         <div className="grid grid-cols-12 text-neutral-100 mb-8">
           <div className="col-span-2 font-semibold text-2xl">
             <div className="flex flex-col ">
@@ -33,7 +33,6 @@ export default function Experience() {
               investigation knowledge. Also leveraged AI agents to accelerate
               development tasks and code quality improvements across the team.
             </p>
-            <p className="text-neutral-100 font-medium"></p>
           </div>
         </div>
 
