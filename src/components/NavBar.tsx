@@ -1,5 +1,5 @@
 const YEARS_OF_EXPERIENCE = Math.floor(
-  (Date.now() - new Date('2017/05/01').getTime()) / (1000 * 60 * 60 * 24 * 365)
+  (Date.now() - new Date("2017/05/01").getTime()) / (1000 * 60 * 60 * 24 * 365)
 );
 
 export default function NavBar() {
@@ -18,16 +18,13 @@ export default function NavBar() {
           <span className="block overflow-hidden text-[clamp(16px,1.2vw,20px)] font-medium">
             Currently at
           </span>
-          <span
-            className="block overflow-hidden font-medium text-[clamp(16px,1.2vw,20px)] text-neutral-400
-          hover:text-blue-600 hover:underline hover:cursor-pointer"
-          >
+          <span className="block overflow-hidden font-medium text-[clamp(16px,1.2vw,20px)] text-neutral-400">
             Meta
           </span>
         </ul>
         <ul className="hidden lg:block col-span-3">
           <span className="block overflow-hidden text-[clamp(16px,1.2vw,20px)] font-medium">
-            Years of Experience{' '}
+            Years of Experience{" "}
           </span>
           <span className="block overflow-hidden font-medium text-[clamp(16px,1.2vw,20px)] text-neutral-400">
             {YEARS_OF_EXPERIENCE}
