@@ -75,7 +75,7 @@ export default function Contact() {
       id="contact"
       className="flex flex-col items-center py-28 px-4 lg:px-8"
     >
-      <h2 className="flex justify-between w-full mb-6 lg:mb-8">
+      <h2 className="flex justify-end w-full mb-6 lg:mb-8">
         <span className="text-[clamp(48px,12vw,200px)] font-bold tracking-tight leading-[0.8] uppercase">
           Contact
         </span>

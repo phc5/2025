@@ -71,8 +71,8 @@ export default function TechStack() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center pt-28 px-4 lg:px-8">
-      <h2 className="flex justify-between w-full mb-6 lg:mb-8">
+    <section className="h-svh flex flex-col items-center pt-28 px-4 lg:px-8">
+      <h2 className="flex justify-center w-full mb-6 lg:mb-8">
         <span className="text-[clamp(48px,12vw,200px)] font-bold tracking-tight leading-[0.8] uppercase">
           Tech Stack
         </span>
