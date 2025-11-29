@@ -4,7 +4,7 @@ const YEARS_OF_EXPERIENCE = Math.floor(
 
 export default function NavBar() {
   return (
-    <header className="overflow-hidden fixed left-4 lg:left-8 right-4 lg:right-8 top-4 lg:top-6">
+    <header className="overflow-hidden fixed left-4 lg:left-8 right-4 lg:right-8 top-4 lg:top-6 z-50">
       <nav className="grid grid-cols-12 gap-4 lg:gp-8 tracking-tighter">
         <ul className="hidden lg:block col-span-3">
           <span className="block overflow-hidden text-[clamp(16px,1.2vw,20px)] font-medium">

@@ -27,14 +27,17 @@ export default function Experience() {
   const metaContentRef = useRef(null);
   const awsContentRef = useRef(null);
   const kbbContentRef = useRef(null);
+  const metaImageRef = useRef(null);
+  const awsImageRef = useRef(null);
+  const kbbImageRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Pin the section
       ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: "top top",
-        end: "+=3000",
+        start: "top-=112 top", // 112 to account for margin on section
+        end: "+=6000", // 6000px of scrolling
         pin: true,
         pinSpacing: true,
         anticipatePin: 1,
@@ -42,14 +45,9 @@ export default function Experience() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
-          end: "+=3000",
-          scrub: 0.1,
-          snap: {
-            snapTo: [0, 0.33, 0.66, 1], // Snap to each company
-            duration: 0.1, // How long the snap takes
-            ease: "power4.inOut",
-          },
+          start: "top-=112 top",
+          end: "+=6000",
+          scrub: 0.5,
         },
       });
 
@@ -57,12 +55,18 @@ export default function Experience() {
       tl.to(metaContentRef.current, {
         opacity: 0,
         pointerEvents: "none",
+        duration: 1,
       })
+        .to(metaImageRef.current, {
+          opacity: 0,
+          duration: 1,
+        })
         .to(
           metaRef.current,
           {
             backgroundColor: "#000000",
             borderColor: "#000000",
+            duration: 1,
           },
           "<"
         )
@@ -72,22 +76,34 @@ export default function Experience() {
           {
             backgroundColor: "#FF9900",
             borderColor: "#FF9900",
+            duration: 1,
           },
           "<"
         )
+        .to(awsImageRef.current, {
+          opacity: 1,
+          duration: 1,
+        })
         .to(awsContentRef.current, {
           opacity: 1,
           pointerEvents: "auto",
+          duration: 1,
         })
         .to(awsContentRef.current, {
           opacity: 0,
           pointerEvents: "none",
+          duration: 1,
+        })
+        .to(awsImageRef.current, {
+          opacity: 0,
+          duration: 1,
         })
         .to(
           awsRef.current,
           {
             backgroundColor: "#000000",
             borderColor: "#000000",
+            duration: 1,
           },
           "<"
         )
@@ -97,12 +113,19 @@ export default function Experience() {
           {
             backgroundColor: "#1F3E74",
             borderColor: "#1F3E74",
+            duration: 1,
           },
           "<"
         )
+        .to(kbbImageRef.current, {
+          opacity: 1,
+          pointerEvents: "auto",
+          duration: 1,
+        })
         .to(kbbContentRef.current, {
           opacity: 1,
           pointerEvents: "auto",
+          duration: 1,
         });
     }, sectionRef);
 
@@ -113,7 +136,7 @@ export default function Experience() {
     <section
       ref={sectionRef}
       id="experience"
-      className="h-screen flex flex-col py-28 px-4 lg:px-8"
+      className="h-screen flex flex-col my-28 px-4 lg:px-8"
     >
       <h2 className="flex justify-between w-full mb-6 lg:mb-20">
         <span className="text-[clamp(48px,12vw,200px)] font-bold tracking-tight leading-[0.8] uppercase">
@@ -121,8 +144,39 @@ export default function Experience() {
         </span>
       </h2>
 
-      <div className="flex">
-        <div className="flex-2">{/* Your empty content here */}</div>
+      <div className="flex gap-8">
+        <div className="flex-2 relative">
+          <Image
+            ref={metaImageRef}
+            src="/meta.png"
+            alt="Meta"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+            className="absolute inset-0"
+          />
+          <Image
+            ref={awsImageRef}
+            src="/aws.png"
+            alt="AWS"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+            className="absolute inset-0 opacity-0"
+          />
+          <Image
+            ref={kbbImageRef}
+            src="/kbb.png"
+            alt="KBB"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+            className="absolute inset-0 opacity-0"
+          />
+        </div>
 
         <div className="flex-1 flex flex-col">
           {/* Logo boxes */}
