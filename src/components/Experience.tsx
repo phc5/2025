@@ -55,7 +55,7 @@ export default function Experience() {
       tl.to(metaContentRef.current, {
         opacity: 0,
         pointerEvents: "none",
-        duration: 1,
+        duration: 10,
       })
         .to(metaImageRef.current, {
           opacity: 0,
@@ -87,12 +87,12 @@ export default function Experience() {
         .to(awsContentRef.current, {
           opacity: 1,
           pointerEvents: "auto",
-          duration: 1,
+          duration: 10,
         })
         .to(awsContentRef.current, {
           opacity: 0,
           pointerEvents: "none",
-          duration: 1,
+          duration: 10,
         })
         .to(awsImageRef.current, {
           opacity: 0,
@@ -125,7 +125,7 @@ export default function Experience() {
         .to(kbbContentRef.current, {
           opacity: 1,
           pointerEvents: "auto",
-          duration: 1,
+          duration: 10,
         });
     }, sectionRef);
 
@@ -136,7 +136,7 @@ export default function Experience() {
     <section
       ref={sectionRef}
       id="experience"
-      className="h-screen flex flex-col my-28 px-4 lg:px-8"
+      className="h-svh flex flex-col my-28 px-4 lg:px-8"
     >
       <h2 className="flex justify-between w-full mb-6 lg:mb-20">
         <span className="text-[clamp(48px,12vw,200px)] font-bold tracking-tight leading-[0.8] uppercase">
@@ -144,8 +144,8 @@ export default function Experience() {
         </span>
       </h2>
 
-      <div className="flex gap-8">
-        <div className="flex-2 relative">
+      <div className="flex flex-col lg:flex-row gap-8">
+        <div className="lg:flex-2 relative aspect-video">
           <Image
             ref={metaImageRef}
             src="/meta.png"
@@ -178,7 +178,7 @@ export default function Experience() {
           />
         </div>
 
-        <div className="flex-1 flex flex-col">
+        <div className="relative flex-1 flex flex-col">
           {/* Logo boxes */}
           <div className="flex gap-2 mb-6">
             <div
@@ -188,9 +188,9 @@ export default function Experience() {
               <Image
                 src="/meta.svg"
                 alt="Meta"
-                width={50}
-                height={50}
-                className="invert"
+                width={0}
+                height={0}
+                className="invert w-[50px] h-[50px]"
               />
             </div>
 
@@ -273,15 +273,17 @@ export default function Experience() {
               ref={kbbContentRef}
               className="absolute inset-0 opacity-0 pointer-events-none"
             >
-              <h3 className="font-extrabold text-4xl mb-2">Kelley Blue Book</h3>
+              <h3 className="font-extrabold text-3xl lg:text-4xl mb-2">
+                Kelley Blue Book
+              </h3>
               <p className="font-semibold uppercase text-neutral-600 mb-4 tracking-tight">
                 May 2017 - July 2020
               </p>
-              <p className="text-neutral-700 font-bold text-2xl mb-4 tracking-tighter">
+              <p className="text-neutral-700 font-bold text-xl lg:text-2xl mb-4 tracking-tighter">
                 Shipped microservices and web applications for KBB.com and
                 developed UI components for internal component library.
               </p>
-              <p className="uppercase font-extrabold text-2xl bg-[linear-gradient(45deg,#8FA9D4,#1F3E74_75%,#0F1E3A_100%)] bg-clip-text text-transparent tracking-tighter">
+              <p className="uppercase font-extrabold text-xl lg:text-2xl  bg-[linear-gradient(45deg,#8FA9D4,#1F3E74_75%,#0F1E3A_100%)] bg-clip-text text-transparent tracking-tighter">
                 React Typescript GraphQL Node.js C# Terraform AWS HTML CSS
               </p>
             </div>
