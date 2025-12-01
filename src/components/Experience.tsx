@@ -180,7 +180,7 @@ export default function Experience() {
 
         <div className="relative flex-1 flex flex-col">
           {/* Logo boxes */}
-          <div className="flex gap-2 mb-6">
+          <div className="flex gap-2 mb-6 justify-center">
             <div
               ref={metaRef}
               className="border-[#0081FB] fill-black bg-[#0081FB] border-2 rounded-2xl p-2 shrink-0"

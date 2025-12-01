@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -16,11 +17,6 @@ const menuItems = [
     id: "home",
     href: "/",
     label: "Home",
-  },
-  {
-    id: "about",
-    href: "#about",
-    label: "About",
   },
   {
     id: "experience",
@@ -40,10 +36,21 @@ export default function IslandMenu({ isOpen, onClose }: IslandMenuProps) {
   const stagger = MAX_STAGGER_DURATION / numItems;
 
   const scrollToSection = (id: string) => {
+    const isHome = id === "/";
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: `${id}`, offsetY: 70 },
+      scrollTo: { y: `${isHome ? 0 : id}`, offsetY: 70 },
       ease: "power2.inOut",
+      onStart: () => {
+        if (isHome) {
+          ScrollTrigger.getAll().forEach((st) => st.disable());
+        }
+      },
+      onComplete: () => {
+        if (isHome) {
+          ScrollTrigger.getAll().forEach((st) => st.enable());
+        }
+      },
     });
   };
 
