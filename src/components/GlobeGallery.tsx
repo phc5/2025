@@ -53,10 +53,6 @@ const DEFAULT_IMAGES: ImageItem[] = [
     alt: "Me and Kora",
   },
   {
-    src: "/globe-gallery/me.jpg",
-    alt: "Me",
-  },
-  {
     src: "/globe-gallery/me-and-kora-big-bear.jpeg",
     alt: "Me and Kora in Big Bear",
   },
@@ -79,7 +75,7 @@ const DEFAULT_IMAGES: ImageItem[] = [
 ];
 
 const DEFAULTS = {
-  maxVerticalRotationDeg: 5,
+  maxVerticalRotationDeg: 10,
   dragSensitivity: 20,
   enlargeTransitionMs: 300,
   segments: 35,
@@ -175,7 +171,7 @@ export default function DomeGallery({
   dragSensitivity = DEFAULTS.dragSensitivity,
   enlargeTransitionMs = DEFAULTS.enlargeTransitionMs,
   segments = DEFAULTS.segments,
-  dragDampening = 3,
+  dragDampening = 0.5,
   openedImageWidth = "400px",
   openedImageHeight = "400px",
   imageBorderRadius = "30px",
@@ -771,7 +767,13 @@ export default function DomeGallery({
       --rot-x: calc((360deg / var(--segments-y)) / 2);
       --item-width: calc(var(--circ) / var(--segments-x));
       --item-height: calc(var(--circ) / var(--segments-y));
-      width: 600px
+      width: 400px
+    }
+
+    @media (width >= 64rem /* 1024px */) {
+        .sphere-root {
+          width: 600px
+      }
     }
     
     .sphere-root * { box-sizing: border-box; }
@@ -824,16 +826,6 @@ export default function DomeGallery({
       }
     }
     
-    // body.dg-scroll-lock {
-    //   position: fixed !important;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100% !important;
-    //   height: 100% !important;
-    //   overflow: hidden !important;
-    //   touch-action: none !important;
-    //   overscroll-behavior: contain !important;
-    // }
     .item__image {
       position: absolute;
       inset: 10px;
@@ -859,7 +851,7 @@ export default function DomeGallery({
       <style dangerouslySetInnerHTML={{ __html: cssStyles }} />
       <div
         ref={rootRef}
-        className="sphere-root relative w-[500px] h-[500px]"
+        className="sphere-root relative h-[500px]"
         style={
           {
             ["--segments-x" as any]: segments,
