@@ -192,7 +192,7 @@ export default function TechStack() {
             href="https://vercel.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="grid-item flex items-center justify-center border-b border-neutral-300 group cursor-pointer h-[100px]"
+            className="grid-item flex items-center justify-center border-neutral-300 group cursor-pointer h-[100px]"
             aria-label="Visit Vercel website"
           >
             <img
