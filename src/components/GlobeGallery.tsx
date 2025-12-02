@@ -767,8 +767,8 @@ export default function DomeGallery({
       --rot-x: calc((360deg / var(--segments-y)) / 2);
       --item-width: calc(var(--circ) / var(--segments-x));
       --item-height: calc(var(--circ) / var(--segments-y));
-      height: 400px;
-      width: 300px;
+      height: 450px;
+      width: 450px;
     }
 
     @media (width >= 48rem /* 1024px */) {
