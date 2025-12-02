@@ -83,43 +83,41 @@ export default function Contact() {
       <div className="relative w-full">
         <div ref={gridRef} className="hidden lg:grid">
           <div className="grid grid-cols-4 border-neutral-300 h-[clamp(200px,20vw,400px)]">
-            <div className="grid grid-rows-2 col-span-2">
-              <a
-                href="https://graphql.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="grid-item col-span-1 flex items-center justify-center border-r border-b border-neutral-300 cursor-pointer"
-                aria-label="Visit GraphQL website"
-              >
-                <img
-                  alt="Graph QL"
-                  loading="lazy"
-                  width="80"
-                  height="80"
-                  decoding="async"
-                  data-nimg="1"
-                  className="z-10"
-                  src="/linkedin.svg"
-                />
-              </a>
-              <a
-                href="mailto:paulhyunchong@gmail.com"
-                className="grid-item flex items-center justify-center border-r border-neutral-300 group cursor-pointer"
-                aria-label="Send me an email"
-                role="button"
-              >
-                <img
-                  alt="Contact"
-                  loading="lazy"
-                  width="90"
-                  height="90"
-                  decoding="async"
-                  data-nimg="1"
-                  className="z-10"
-                  src="/email.svg"
-                />
-              </a>
-            </div>
+            <a
+              href="https://www.linkedin.com/in/paulhchong/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid-item col-span-1 flex items-center justify-center border-r border-neutral-300 cursor-pointer"
+              aria-label="Visit my LinkedIn"
+            >
+              <img
+                alt="LinkedIn"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                className="z-10"
+                src="/linkedin.svg"
+              />
+            </a>
+            <a
+              href="mailto:paulhyunchong@gmail.com"
+              className="grid-item flex items-center justify-center border-r border-neutral-300 group cursor-pointer"
+              aria-label="Send me an email"
+              role="button"
+            >
+              <img
+                alt="Email"
+                loading="lazy"
+                width="90"
+                height="90"
+                decoding="async"
+                data-nimg="1"
+                className="z-10"
+                src="/email.svg"
+              />
+            </a>
             <a
               href="https://github.com/phc5"
               target="_blank"
