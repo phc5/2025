@@ -1,10 +1,8 @@
 "use client";
 
 import Ticker from "@/components/HorizontalTicker";
-import { useState } from "react";
 
 export default function Island() {
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div
       className="py-2 pl-2 rounded-2xl md:rounded-[20px] bg-neutral-900 border

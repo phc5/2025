@@ -8,7 +8,7 @@ export default function Home() {
     <div className="font-sans">
       <NavBar />
       <Island />
-      <main className="min-h-screen">
+      <main className="py-8 px-16">
         <Hero />
         <About />
       </main>
