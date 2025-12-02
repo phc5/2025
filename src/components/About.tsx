@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex justify-center pt-30 sm:pt-40 pb-28 p-4 lg:px-8"
+      className="flex justify-center pt-25 sm:pt-40 pb-28 p-4 lg:px-8"
     >
       <div className="hidden sm:flex flex-col col-span-12">
         <GlobeGallery />
