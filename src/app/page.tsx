@@ -1,10 +1,7 @@
 import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import Island from "@/components/Island";
 import NavBar from "@/components/NavBar";
-import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
@@ -14,9 +11,6 @@ export default function Home() {
       <main className="min-h-screen w-full items-center justify-between py-8 px-16 bg-white sm:items-start">
         <Hero />
         <About />
-        <Experience />
-        <TechStack />
-        <Contact />
       </main>
     </div>
   );
