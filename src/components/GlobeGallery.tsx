@@ -771,16 +771,9 @@ export default function DomeGallery({
       width: 300px;
     }
 
-    @media (width >= 40rem /* 1024px */) {
+    @media (width >= 48rem /* 1024px */) {
         .sphere-root {
-          height: 400px;
-          width: 400px;
-      }
-    }
-
-    @media (width >= 64rem /* 1024px */) {
-        .sphere-root {
-          height: 600px;
+           height: 600px;
           width: 600px;
       }
     }
