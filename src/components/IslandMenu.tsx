@@ -24,6 +24,11 @@ const menuItems = [
     label: "Experience",
   },
   {
+    id: "techstack",
+    href: "#techstack",
+    label: "Tech Stack",
+  },
+  {
     id: "Contact",
     href: "#contact",
     label: "Contact",
