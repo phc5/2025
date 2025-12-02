@@ -5,10 +5,10 @@ import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-50 font-sans">
+    <div className="font-sans">
       <NavBar />
       <Island />
-      <main className="min-h-screen w-full items-center justify-between py-8 px-16 bg-white sm:items-start">
+      <main className="min-h-screen">
         <Hero />
         <About />
       </main>
