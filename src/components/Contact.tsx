@@ -73,7 +73,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center py-28 px-4 lg:px-8"
+      className="flex flex-col items-center mb-40 lg:mb-0 py-28 px-4 lg:px-8"
     >
       <h2 className="flex justify-end w-full mb-6 lg:mb-8">
         <span className="text-[clamp(48px,12vw,200px)] font-bold tracking-tight leading-[0.8] uppercase">
@@ -81,8 +81,84 @@ export default function Contact() {
         </span>
       </h2>
       <div className="relative w-full">
+        <div ref={gridRef} className="lg:hidden">
+          <div className="grid grid-col-1 border-neutral-300 h-[clamp(200px,20vw,400px)]">
+            <a
+              href="https://www.linkedin.com/in/paulhchong/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid-item col-span-1 flex items-center justify-center border-b border-neutral-300 cursor-pointer h-[100px]"
+              aria-label="Visit my LinkedIn"
+            >
+              <img
+                alt="LinkedIn"
+                loading="lazy"
+                width="50"
+                height="50"
+                decoding="async"
+                data-nimg="1"
+                className="z-10"
+                src="/linkedin.svg"
+              />
+            </a>
+            <a
+              href="mailto:paulhyunchong@gmail.com"
+              className="grid-item flex items-center justify-center border-b border-neutral-300 group cursor-pointer h-[100px]"
+              aria-label="Send me an email"
+              role="button"
+            >
+              <img
+                alt="Email"
+                loading="lazy"
+                width="50"
+                height="50"
+                decoding="async"
+                data-nimg="1"
+                className="z-10"
+                src="/email.svg"
+              />
+            </a>
+            <a
+              href="https://github.com/phc5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid-item col-span-1 flex items-center justify-center border-b border-neutral-300 group cursor-pointer h-[100px]"
+              aria-label="Visit my Github"
+            >
+              <img
+                alt="Github"
+                loading="lazy"
+                width="50"
+                height="50"
+                decoding="async"
+                data-nimg="1"
+                className="z-10"
+                src="/github.svg"
+              />
+            </a>
+            <a
+              href="https://instagram.com/paulhc_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid-item col-span-1 flex items-center justify-center border-neutral-300 group h-[100px]"
+              aria-label="Visit My Instagram"
+            >
+              <img
+                alt="Instagram"
+                loading="lazy"
+                width="50"
+                height="50"
+                decoding="async"
+                data-nimg="1"
+                className="z-10"
+                src="/instagram.svg"
+              />
+            </a>
+          </div>
+        </div>
+
         <div ref={gridRef} className="hidden lg:grid">
-          <div className="grid grid-cols-4 border-neutral-300 h-[clamp(200px,20vw,400px)]">
+          <div className="grid grid-col-1 lg:grid-cols-4 border-neutral-300 h-[clamp(200px,20vw,400px)]">
             <a
               href="https://www.linkedin.com/in/paulhchong/"
               target="_blank"
@@ -93,8 +169,8 @@ export default function Contact() {
               <img
                 alt="LinkedIn"
                 loading="lazy"
-                width="80"
-                height="80"
+                width="50"
+                height="50"
                 decoding="async"
                 data-nimg="1"
                 className="z-10"
@@ -110,8 +186,8 @@ export default function Contact() {
               <img
                 alt="Email"
                 loading="lazy"
-                width="90"
-                height="90"
+                width="50"
+                height="50"
                 decoding="async"
                 data-nimg="1"
                 className="z-10"
@@ -128,8 +204,8 @@ export default function Contact() {
               <img
                 alt="Github"
                 loading="lazy"
-                width="90"
-                height="90"
+                width="50"
+                height="50"
                 decoding="async"
                 data-nimg="1"
                 className="z-10"
@@ -140,14 +216,14 @@ export default function Contact() {
               href="https://instagram.com/paulhc_"
               target="_blank"
               rel="noopener noreferrer"
-              className="grid-item col-span-1  flex items-center justify-center border-neutral-300 group"
+              className="grid-item col-span-1 flex items-center justify-center border-neutral-300 group"
               aria-label="Visit My Instagram"
             >
               <img
                 alt="Instagram"
                 loading="lazy"
-                width="90"
-                height="90"
+                width="50"
+                height="50"
                 decoding="async"
                 data-nimg="1"
                 className="z-10"
