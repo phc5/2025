@@ -767,12 +767,21 @@ export default function DomeGallery({
       --rot-x: calc((360deg / var(--segments-y)) / 2);
       --item-width: calc(var(--circ) / var(--segments-x));
       --item-height: calc(var(--circ) / var(--segments-y));
-      width: 400px
+      height: 400px;
+      width: 300px;
+    }
+
+    @media (width >= 40rem /* 1024px */) {
+        .sphere-root {
+          height: 400px;
+          width: 400px;
+      }
     }
 
     @media (width >= 64rem /* 1024px */) {
         .sphere-root {
-          width: 600px
+          height: 600px;
+          width: 600px;
       }
     }
     
@@ -851,7 +860,7 @@ export default function DomeGallery({
       <style dangerouslySetInnerHTML={{ __html: cssStyles }} />
       <div
         ref={rootRef}
-        className="sphere-root relative h-[500px]"
+        className="sphere-root relative"
         style={
           {
             ["--segments-x" as any]: segments,
